@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>close5 app</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/close5appclient.js"></script>
+</head>
+<body>
+<h1>Node + Express project demo</h1>
+Simply set input parameter and click on "Submit" to get items.
+<h2>Get sorted items list </h2>
+<form id=getItemsSortedForm onsubmit=
+	"var f=$('#getItemsSortedForm').serializeArray(); return getItemsSorted(f[0].value, f[1].value);">
+ Sorted by:
+  <select name="sortedBy">
+    <option value="createdDate">Created Date</option>
+    <option value="price">Price</option>
+   </select>
+   <br>
+  <input type="radio" name="order" value="ascending" checked>Ascending<br>
+  <input type="radio" name="order" value="descending">Descending<br>
+  <input type="submit" value="Submit">
+   </form>
+  <p>Result:<br> 
+  <textarea class="getItemsSortedResult" rows="20" cols="100">
+  </textarea>
+  </p> 
+
+<h2>Get item by id </h2>
+<form id=getItemByIdForm onsubmit=
+	"var f=$('#getItemByIdForm').serializeArray(); return getItemById(f[0].value);">
+ ID: 
+  <input type="text" name="id"><br>
+  <input type="submit" value="Submit">
+</form>
+  <p>Result:<br> 
+  <textarea class="getItemByIdResult" rows="10" cols="100"> </textarea>
+  </p> 
+
+<h2>Get items by userId </h2>
+<form id=getItemsByUserIdForm onsubmit=
+	"var f=$('#getItemsByUserIdForm').serializeArray(); return getItemsByUserId(f[0].value);">
+ User ID: 
+  <input type="text" name="userId"><br>
+  <input type="submit" value="Submit">
+</form>
+  <p>Result:<br> 
+  <textarea class="getItemsByUserIdResult" rows="20" cols="100" readonly> </textarea>
+  </p> 
+
+<h2>Get items within distance </h2>
+<form id=getItemsWithinDistanceForm onsubmit=
+	"var f=$('#getItemsWithinDistanceForm').serializeArray(); 
+	return getItemsWithinDistance(f[0].value, f[1].value,f[2].value);">
+ Distance(miles): 
+  <input type="number" name="distance" step="0.01" value=50><br>
+  Your Location:<br>
+  Latitude:  
+  <input type="number" name="latitude" step="0.000000000000001" value=0.00><br>
+  Longitude:  
+  <input type="number" name="longitude" step="0.000000000000001" value=0.00><br>
+ 
+  <input type="submit" value="Submit">
+</form>
+  <p>Result:<br> 
+  <textarea class="getItemsWithinDistanceResult" rows="20" cols="100" readonly> </textarea>
+  </p> 
+
+</body>
+</html>

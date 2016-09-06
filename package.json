@@ -1,0 +1,29 @@
+{
+  "name": "close5app",
+  "version": "1.0.0",
+  "description": "close5 interview code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xihui/codechallenge.git"
+  },
+  "keywords": [
+    "close5",
+    "code",
+    "challenge"
+  ],
+  "author": "Xihui Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xihui/codechallenge/issues"
+  },
+  "homepage": "https://github.com/xihui/codechallenge#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.0.1",
+    "binary-search":"^1.3.2"
+  }
+}
